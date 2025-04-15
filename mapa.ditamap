@@ -9,19 +9,21 @@
     <topicref href="infoConsulta.dita" navtitle="Resumen de la consulta"/>
   </topicref>
 
-  <!-- 1.2. Pruebas Realizadas -->
+  <!-- 2. Pruebas Realizadas -->
   <topicref navtitle="Pruebas Realizadas">
+    <topicref href="pruebas/inspeccionVisual.dita" navtitle="Inspeccion Visual"/>
     <topicref href="pruebas/otoscopia.dita" navtitle="Otoscopio"/>
     <topicref href="pruebas/timpanometria.dita" navtitle="Timpanometria"/>
+    <topicref href="pruebas/pruebaTemperatura.dita" navtitle="Prueba de temperatura"/>
   </topicref>
 
-  <!-- 2. Diagnóstico -->
+  <!-- 3. Diagnóstico -->
   <topicref navtitle="Diagnóstico">
     <topicref href="resultados.dita" navtitle="Resultados"/>
     <topicref href="enfermedades/otitis.dita" navtitle="Enfermedad"/>
   </topicref>
 
-  <!-- 3. tratamiento -->
+  <!-- 4. tratamiento -->
   <topicref navtitle="Tratamiento">
     <topicref navtitle="Medicación">
       <topicref href="medicamentos/ibuprofeno.dita" navtitle="Ibuprofeno"/>
