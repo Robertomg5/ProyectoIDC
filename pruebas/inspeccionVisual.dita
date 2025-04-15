@@ -1,0 +1,11 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="inspeccionVisual" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Inspección visual general</title>
+  <conbody>
+    <p>
+      <b>Observación del aspecto general del paciente.</b>
+      El médico observa la coloración de la piel, signos de fatiga, inflamación visible, lesiones cutáneas o cualquier 
+      otro indicio externo que pueda ayudar a identificar enfermedades comunes.
+    </p>
+  </conbody>
+</concept>

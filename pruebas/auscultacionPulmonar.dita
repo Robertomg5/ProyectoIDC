@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="auscultacionPulmonar" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Auscultación pulmonar</title>
+  <conbody>
+    <p>
+      <b>Escucha de los sonidos pulmonares mediante estetoscopio.</b>
+      Esta prueba permite detectar ruidos anómalos en los pulmones como sibilancias, estertores o disminución del murmullo 
+      vesicular, que pueden indicar infecciones respiratorias, asma o neumonía.
+    </p>
+  </conbody>
+</concept>

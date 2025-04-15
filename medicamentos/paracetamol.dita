@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="paracetamol" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Paracetamol</title>
+  <conbody>
+    <p><b>Nombre comercial:</b> Paracetamol</p>
+    <p><b>Tipo:</b> Analgésico y antipirético</p>
+    <p><b>Dosis recomendada:</b> 500-1000 mg cada 6-8 horas si hay fiebre o dolor.</p>
+    <p><b>Observaciones:</b> No superar los 4 gramos diarios. Usar con precaución en personas con problemas hepáticos.</p>
+  </conbody>
+</concept>

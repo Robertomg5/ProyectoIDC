@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tomaTemperatura" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Toma de temperatura</title>
+  <conbody>
+    <p>
+      <b>Medición de la temperatura corporal para detectar fiebre.</b>
+      Se realiza con un termómetro digital, en la axila, la boca o el oído. La fiebre puede ser indicativa de infección 
+      o inflamación y orienta el diagnóstico inicial.
+    </p>
+  </conbody>
+</concept>

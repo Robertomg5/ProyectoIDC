@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="palpacionAbdominal" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Palpación abdominal</title>
+  <conbody>
+    <p>
+      <b>Exploración manual del abdomen para detectar molestias o anomalías.</b>
+      Consiste en presionar ligeramente diferentes zonas del abdomen con las manos para identificar puntos dolorosos, 
+      masas o rigidez. Es útil para orientar el diagnóstico de problemas digestivos, urinarios o ginecológicos.
+    </p>
+  </conbody>
+</concept>
