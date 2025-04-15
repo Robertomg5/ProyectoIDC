@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesOtitis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Otitis</title>
+  <conbody>
+    <ul>
+      <li>Evitar el uso de bastoncillos de algodón, ya que pueden dañar el oído. </li>
+      <li>Secarse bien los oídos después de nadar, bañarse o ducharse.</li>
+      <li>Dormir con la cabeza elevada para reducir la inflamación.</li>
+      <li>Aplicar un paño húmedo y tibio sobre la oreja para disminuir el dolor. </li>
+    </ul>
+  </conbody>
+</concept>

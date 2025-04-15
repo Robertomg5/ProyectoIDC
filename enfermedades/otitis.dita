@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="enfermedad" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Otitis</title>
+  <conbody>
+    <p>
+    Se denomina otitis a la inflamación del oído. Existe diferentes tipos, pero la más común se denomina otitis media.
+    La otitis media es la presencia de líquido (con o sin pus), llamado exudado y que es producto de una inflamación, 
+    en la cavidad del oído medio, que se localiza justo detrás del tímpano.
+    </p>
+    <image href="../img/otitis.jpeg" alt="Otitis media en oído" placement="break"/>
+    <p>
+    Se produce cuando la trompa de Eustaquio -el canal que conecta la parte media del oído con la garganta- 
+    se obstruye por diferentes motivos. La función de esta trompa es drenar el líquido que se produce en el oído medio, 
+    por lo que, si se obstruye, se puede acumular este líquido y producirse una infección.
+
+    Se trata de una de las enfermedades más frecuentes en la infancia y uno de los principales motivos de consulta 
+    al pediatra. De origen viral o bacteriano, la persistencia de este proceso durante varios meses puede dar lugar 
+    a la pérdida de audición en los niños.
+    </p>
+  </conbody>
+</concept>

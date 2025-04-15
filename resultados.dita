@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="resultados">
+  <title>Resultados de las pruebas</title>
+  <conbody>
+    <p>
+    Tras las pruebas realizadas en la misma consulta, se ha llegado a la conclusión que el paciente padece
+    una otitis aguda con cuadros de fiebre moderada. A continuación se le mostrará más información sobre la patología
+    detectada y su correcto tratamiento.
+    </p>
+  </conbody>
+</concept>

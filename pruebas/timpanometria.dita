@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="timpanometria" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Timpanometria</title>
+  <conbody>
+    <p>
+      <b>Prueba auditiva que evalúa el estado del oído medio.</b>
+      Se introduce un dispositivo en el oído para cambiar la presión del aire y hacer que el tímpano se mueva para 
+      detectar posibles problemas en el oído medio, como perforación timpánica, otitis infecciosa, tumores, etc.
+    </p>
+  </conbody>
+</concept>

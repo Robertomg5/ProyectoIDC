@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.3/os/dtd/concept.dtd">
+<concept id="infoConsulta" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Paciente</title>
+  <conbody>
+    <p><b>Nombre:</b> Javier</p>
+    <p><b>Apellidos:</b> López Martínez</p>
+    <p><b>Edad:</b> 23</p>
+    <p><b>Alergias:</b> Alergia al polen</p>
+    <p><b>Motivo de consulta:</b> El paciente llega con síntomas de dolor de oídos y fiebre</p>
+  </conbody>
+</concept>

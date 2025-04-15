@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="amoxicilina" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Amoxicilina</title>
+  <conbody>
+    <p><b>Nombre comercial:</b> Amoxicilina</p>
+    <p><b>Tipo:</b> Antibiótico</p>
+    <p><b>Dosis recomendada:</b> 500 mg cada 8 horas durante 7 días.</p>
+    <p><b>Observaciones:</b> Es importante completar el tratamiento antibiótico aunque desaparezcan los síntomas. Puede causar molestias digestivas.</p>
+  </conbody>
+</concept>

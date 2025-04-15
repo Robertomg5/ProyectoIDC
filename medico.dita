@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.3/os/dtd/concept.dtd">
+<concept id="medico" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+    <title>Médico</title>
+    <conbody>
+        <p><b>Nombre:</b> Dr. Javier López</p>
+        <p><b>Especialidad:</b> Medicina General</p>
+        <p><b>Número de colegiado:</b> 123456</p>
+    </conbody>
+</concept>

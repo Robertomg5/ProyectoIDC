@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="otoscopia" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Otoscopia</title>
+  <conbody>
+    <p>
+      <b>Exploración visual del oído mediante otoscopio.</b>
+      La prueba trata de un examen médico que permite visualizar el conducto auditivo externo y la membrana timpánica, 
+      utilizando un instrumento llamado otoscopio. Es una prueba diagnóstica importante para evaluar la salud auditiva 
+      y detectar posibles enfermedades del oído.  
+    </p>
+  </conbody>
+</concept>

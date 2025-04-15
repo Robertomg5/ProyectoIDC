@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Informe Médico</title>
+
+  <!-- 1. Información de la consulta -->
+  <topicref navtitle="Información de la consulta">
+    <topicref href="medico.dita" navtitle="Médico"/>
+    <topicref href="infoConsulta.dita" navtitle="Resumen de la consulta"/>
+  </topicref>
+
+  <!-- 1.2. Pruebas Realizadas -->
+  <topicref navtitle="Pruebas Realizadas">
+    <topicref href="pruebas/otoscopia.dita" navtitle="Otoscopio"/>
+    <topicref href="pruebas/timpanometria.dita" navtitle="Timpanometria"/>
+  </topicref>
+
+  <!-- 2. Diagnóstico -->
+  <topicref navtitle="Diagnóstico">
+    <topicref href="resultados.dita" navtitle="Resultados"/>
+    <topicref href="enfermedades/otitis.dita" navtitle="Enfermedad"/>
+  </topicref>
+
+  <!-- 3. tratamiento -->
+  <topicref navtitle="Tratamiento">
+    <topicref navtitle="Medicación">
+      <topicref href="medicamentos/ibuprofeno.dita" navtitle="Ibuprofeno"/>
+      <topicref href="medicamentos/amoxicilina.dita" navtitle="Amoxicilina"/>
+    </topicref>
+    <topicref navtitle="Recomendaciones">
+      <topicref href="recomendaciones/recOtitis.dita" navtitle="Recomendaciones"/>
+    </topicref>
+  </topicref>
+</map>
