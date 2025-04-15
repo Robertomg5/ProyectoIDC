@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="mononucleosis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Mononucleosis</title>
+  <conbody>
+    <p>
+    La mononucleosis infecciosa, también conocida como la "enfermedad del beso", es causada por el virus de Epstein-Barr.
+    </p>
+    <image href="../img/mononucleosis.jpeg" alt="Mononucleosis infecciosa" placement="break"/>
+    <p>
+    Los síntomas incluyen fiebre, dolor de garganta, ganglios linfáticos inflamados y fatiga intensa. Puede durar varias semanas y requiere reposo y cuidados sintomáticos.
+    </p>
+  </conbody>
+</concept>

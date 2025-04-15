@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="faringitis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Faringitis</title>
+  <conbody>
+    <p>
+    La faringitis es la inflamación de la faringe, ubicada en la parte posterior de la garganta. Puede deberse a infecciones virales o bacterianas.
+    </p>
+    <image href="../img/faringitis.jpg" alt="Faringe inflamada" placement="break"/>
+    <p>
+    Los síntomas comunes incluyen dolor de garganta, fiebre, dificultad para tragar y malestar general. La mayoría de los casos son leves y se resuelven sin tratamiento específico, aunque en infecciones bacterianas puede requerirse antibiótico.
+    </p>
+  </conbody>
+</concept>

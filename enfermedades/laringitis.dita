@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="laringitis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Laringitis</title>
+  <conbody>
+    <p>
+    La laringitis es la inflamación de la laringe, habitualmente causada por una infección o por uso excesivo de la voz.
+    </p>
+    <image href="../img/laringitis.jpg" alt="Laringitis" placement="break"/>
+    <p>
+    Se caracteriza por ronquera, pérdida de voz, tos seca y dolor de garganta. Generalmente es de corta duración y se resuelve sin tratamiento médico.
+    </p>
+  </conbody>
+</concept>

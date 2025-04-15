@@ -1,0 +1,12 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesMononucleosis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Mononucleosis</title>
+  <conbody>
+    <ul>
+      <li>Evitar actividades físicas intensas, especialmente deportes de contacto.</li>
+      <li>Descansar lo máximo posible durante el proceso de recuperación.</li>
+      <li>Beber muchos líquidos para mantenerse hidratado.</li>
+      <li>No compartir utensilios personales como vasos o cubiertos.</li>
+    </ul>
+  </conbody>
+</concept>

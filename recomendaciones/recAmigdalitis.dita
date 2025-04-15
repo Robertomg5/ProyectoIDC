@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesAmigdalitis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Amigdalitis</title>
+  <conbody>
+    <ul>
+      <li>Consumir alimentos blandos y fríos que no irriten la garganta.</li>
+      <li>Hidratarse bien, preferiblemente con agua o bebidas no azucaradas.</li>
+      <li>Evitar cambios bruscos de temperatura ambiental.</li>
+      <li>Guardar reposo en casa para prevenir el empeoramiento.</li>
+    </ul>
+  </conbody>
+</concept>

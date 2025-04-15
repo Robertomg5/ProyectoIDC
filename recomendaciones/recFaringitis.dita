@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesFaringitis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Faringitis</title>
+  <conbody>
+    <ul>
+      <li>Hacer gárgaras con agua tibia con sal para aliviar el dolor de garganta.</li>
+      <li>Beber líquidos calientes como caldos o infusiones.</li>
+      <li>Evitar el consumo de tabaco y ambientes con humo.</li>
+      <li>Descansar adecuadamente para ayudar al cuerpo a recuperarse.</li>
+    </ul>
+  </conbody>
+</concept>

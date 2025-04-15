@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesGripe" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Gripe</title>
+  <conbody>
+    <ul>
+      <li>Descansar lo suficiente para facilitar la recuperación.</li>
+      <li>Beber muchos líquidos para mantenerse hidratado.</li>
+      <li>Evitar el contacto cercano con otras personas para no contagiar.</li>
+      <li>Taparse la boca al toser o estornudar y lavarse las manos frecuentemente.</li>
+    </ul>
+  </conbody>
+</concept>

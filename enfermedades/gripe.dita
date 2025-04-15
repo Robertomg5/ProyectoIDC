@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="gripe" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Gripe</title>
+  <conbody>
+    <p>
+    La gripe es una enfermedad respiratoria causada por el virus de la influenza. Es altamente contagiosa y se transmite por el aire.
+    </p>
+    <image href="../img/gripe.jpg" alt="Virus de la gripe" placement="break"/>
+    <p>
+    Sus síntomas incluyen fiebre alta, dolor muscular, tos, dolor de cabeza y cansancio. Es especialmente peligrosa en personas mayores, niños y pacientes con enfermedades crónicas.
+    </p>
+  </conbody>
+</concept>
+

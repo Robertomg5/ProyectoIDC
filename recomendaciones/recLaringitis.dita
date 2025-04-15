@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesLaringitis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Laringitis</title>
+  <conbody>
+    <ul>
+      <li>Evitar hablar mucho o forzar la voz; guardar reposo vocal.</li>
+      <li>Hidratarse bien, preferentemente con líquidos calientes.</li>
+      <li>Usar humidificadores para mantener el aire húmedo.</li>
+      <li>Evitar ambientes con humo o contaminantes.</li>
+    </ul>
+  </conbody>
+</concept>

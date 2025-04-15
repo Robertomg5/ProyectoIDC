@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recomendacionesGastroenteritis" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Recomendaciones para la Gastroenteritis</title>
+  <conbody>
+    <ul>
+      <li>Beber líquidos en pequeñas cantidades y con frecuencia para evitar la deshidratación.</li>
+      <li>Seguir una dieta blanda (arroz, plátano, manzana, tostadas).</li>
+      <li>Evitar alimentos grasos, picantes o muy azucarados.</li>
+      <li>Lavarse bien las manos para evitar contagios.</li>
+    </ul>
+  </conbody>
+</concept>
