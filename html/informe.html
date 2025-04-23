@@ -8,33 +8,28 @@
 <body>
     <script>
         const pruebasDisponibles = [
-          "Otoscopia", "Auscultación pulmonar", "Exploración faríngea", "Palpación abdominal", "Toma de temperatura", "Inspección visual general"
+          "Otoscopia", "Auscultación pulmonar", "Exploración faríngea",
+          "Palpación abdominal", "Toma de temperatura", "Inspección visual general"
         ];
-    
-        function agregarPrueba() {
-          const input = document.getElementById('input-prueba');
-          const lista = document.getElementById('pruebas-list');
-          const valor = input.value.trim();
-          if (valor && pruebasDisponibles.some(p => p.toLowerCase().includes(valor.toLowerCase()))) {
-            const li = document.createElement('li');
-            li.textContent = valor;
-            const btn = document.createElement('button');
-            btn.textContent = 'Eliminar';
-            btn.className = 'remove-btn';
-            btn.onclick = () => lista.removeChild(li);
-            li.appendChild(btn);
-            lista.appendChild(li);
-            input.value = '';
-          }
+      
+        const input = document.getElementById('input-prueba');
+        const suggestions = document.getElementById('suggestions');
+        const lista = document.getElementById('pruebas-list');
+      
+        function buscador_interno(){
+            filter = input.value.toUpperCase();
+            li = 
         }
-    </script>
+
+      </script>
+      
 
   <div class="container">
     <h1>Informe Médico</h1>
     <form id="informe-form">
       <!-- Datos automáticos -->
       <label for="medico">Médico:</label>
-      <select id="medico" name="diagnostico">
+      <select id="medico" class="medico" name="diagnostico">
         <option value="" disabled selected> </option>
         <option value="medicoJavier">Dr. Javier López</option>
         <option value="medicoJuan">Dr. Juan Pérez</option>
@@ -43,21 +38,24 @@
       <!-- Datos del paciente -->
       <h3> Información de la consulta</h3>
       <label for="nombrePaciente">Nombre del Paciente:</label>
-      <input type="text" id="nombrePaciente" name="nombrePaciente" required>
+      <input type="text" id="nombrePaciente" class="nombre" required>
 
       <label for="apellidosPaciente">Apellidos:</label>
       <input type="text" id="apellidos" name="apellidos" required>
 
       <label for="edad">Edad:</label>
-      <input type="number" id="edad" name="edad" required>
+      <input type="number" id="edad" name="edad" class="small-input" required>
 
       <label for="sintomas">Síntomas:</label>
       <textarea id="sintomas" name="sintomas" rows="3" required></textarea>
+      
       <h3> Pruebas realizadas</h3>
       <div class="autocomplete-container">
-        <input type="text" id="input-prueba" placeholder="Ej: Timpanometría...">
+        <input type="text" id="input-prueba" class="pruebas" placeholder="Ej: Timpanometría...">
         <button type="button" onclick="agregarPrueba()">Añadir</button>
       </div>
+      <select id="suggestions" size="3" style="display: none;"></select>
+
       <ul id="pruebas-list"></ul>
 
       <h3> Diagnóstico</h3>
