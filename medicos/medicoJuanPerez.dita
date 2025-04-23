@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.3/os/dtd/concept.dtd">
 <concept id="medico" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
-  <title>Médico</title>
+  <title>Dr Juan Pérez</title>
   <conbody>
-    <image href="../img/medico.jpg" alt="Foto del Dr. Javier López" placement="break"/>
-    <p><b>Nombre:</b> Dr. Javier López</p>
+    <p><b>Nombre:</b> Dr. Juan Pérez</p>
     <p><b>Especialidad:</b> Medicina General</p>
-    <p><b>Número de colegiado:</b> 123456</p>
+    <p><b>Número de colegiado:</b> 424245</p>
     <p><b>Centro de salud:</b> Centro Médico San Rafael</p>
-    <p><b>Años de experiencia:</b> 15 años</p>
+    <p><b>Años de experiencia:</b> 32 años</p>
     <p><b>Horario de atención:</b> Lunes a Viernes, de 9:00 a 14:00</p>
     <p><b>Idiomas:</b> Español, Inglés</p>
   </conbody>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <title>Generador de Informe Médico</title>
+</head>
+<body>
+    <script>
+        const pruebasDisponibles = [
+          "Otoscopia", "Auscultación pulmonar", "Exploración faríngea", "Palpación abdominal", "Toma de temperatura", "Inspección visual general"
+        ];
+    
+        function agregarPrueba() {
+          const input = document.getElementById('input-prueba');
+          const lista = document.getElementById('pruebas-list');
+          const valor = input.value.trim();
+          if (valor && pruebasDisponibles.some(p => p.toLowerCase().includes(valor.toLowerCase()))) {
+            const li = document.createElement('li');
+            li.textContent = valor;
+            const btn = document.createElement('button');
+            btn.textContent = 'Eliminar';
+            btn.className = 'remove-btn';
+            btn.onclick = () => lista.removeChild(li);
+            li.appendChild(btn);
+            lista.appendChild(li);
+            input.value = '';
+          }
+        }
+    </script>
+
+  <div class="container">
+    <h1>Informe Médico</h1>
+    <form id="informe-form">
+      <!-- Datos automáticos -->
+      <label for="medico">Médico:</label>
+      <select id="medico" name="diagnostico">
+        <option value="" disabled selected> </option>
+        <option value="medicoJavier">Dr. Javier López</option>
+        <option value="medicoJuan">Dr. Juan Pérez</option>
+      </select>
+
+      <!-- Datos del paciente -->
+      <h3> Información de la consulta</h3>
+      <label for="nombrePaciente">Nombre del Paciente:</label>
+      <input type="text" id="nombrePaciente" name="nombrePaciente" required>
+
+      <label for="apellidosPaciente">Apellidos:</label>
+      <input type="text" id="apellidos" name="apellidos" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" required>
+
+      <label for="sintomas">Síntomas:</label>
+      <textarea id="sintomas" name="sintomas" rows="3" required></textarea>
+      <h3> Pruebas realizadas</h3>
+      <div class="autocomplete-container">
+        <input type="text" id="input-prueba" placeholder="Ej: Timpanometría...">
+        <button type="button" onclick="agregarPrueba()">Añadir</button>
+      </div>
+      <ul id="pruebas-list"></ul>
+
+      <h3> Diagnóstico</h3>
+      <label for="resultados">Observaciones y resultados de las pruebas:</label>
+      <textarea id="resultados" name="resultados" rows="3" required></textarea>
+
+      <label for="diagnostico">Patología o enfermedad detectada:</label>
+      <select id="diagnostico" name="diagnostico">
+        <option value="" disabled selected> </option>
+        <option value="otitis">Otitis</option>
+        <option value="faringitis">Faringitis</option>
+        <option value="amigdalitis">Amigdalitis</option>
+        <option value="gastroenteritis">Gastroenteritis</option>
+        <option value="laringitis">Laringitis</option>
+        <option value="gripe">Gripe</option>
+        <option value="mononucleosis">Mononucleosis</option>
+      </select>
+
+      <h3> Tratamiento</h3>
+      <label for="medicacion">Medicamentos recetados:</label>
+      <select id="medicamentos" name="medicamentos">
+        <option value="" disabled selected> </option>
+        <option value="amoxicilina">Amoxicilina</option>
+        <option value="ibuprofeno">Ibuprofeno</option>
+        <option value="Loratadina">Loratadina</option>
+        <option value="omeprazol">Omeprazol</option>
+        <option value="paracetamol">Paracetamol</option>
+        <option value="salbutamol">Salbutamol</option>
+        <option value="sueroOral">Suero Oral</option>
+      </select>
+
+      <h3> Recomendaciones</h3>
+      <select id="diagnostico" name="diagnostico">
+        <option value="" disabled selected> </option>
+        <option value="recOtitis">Otitis</option>
+        <option value="recFaringitis">Recomendaciones Faringitis</option>
+        <option value="recAmigdalitis">Recomendaciones Amigdalitis</option>
+        <option value="recGastroenteritis">Recomendaciones Gastroenteritis</option>
+        <option value="recLaringitis">Recomendaciones Laringitis</option>
+        <option value="recGripe">Recomendaciones Gripe</option>
+        <option value="recMononucleosis">Recomendaciones Mononucleosis</option>
+      </select>
+
+      <button type="submit">Generar Informe</button>
+    </form>
+  </div>
+</body>
+</html>
