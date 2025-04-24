@@ -6,24 +6,102 @@
   <title>Generador de Informe Médico</title>
 </head>
 <body>
-    <script>
-        const pruebasDisponibles = [
-          "Otoscopia", "Auscultación pulmonar", "Exploración faríngea",
-          "Palpación abdominal", "Toma de temperatura", "Inspección visual general"
-        ];
-      
-        const input = document.getElementById('input-prueba');
-        const suggestions = document.getElementById('suggestions');
-        const lista = document.getElementById('pruebas-list');
-      
-        function buscador_interno(){
-            filter = input.value.toUpperCase();
-            li = 
-        }
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('informe-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
 
-      </script>
-      
+        const pruebas = Array.from(document.getElementById('lista-pruebas').children)
+                            .map(li => li.dataset.valor);
+        const medicamentos = Array.from(document.getElementById('lista-medicamentos').children)
+                                  .map(li => li.dataset.valor);
 
+        const datos = {
+          medico: document.getElementById('medico').value,
+          nombre: document.getElementById('nombrePaciente').value,
+          apellidos: document.getElementById('apellidos').value,
+          edad: parseInt(document.getElementById('edad').value),
+          sintomas: document.getElementById('sintomas').value,
+          resultados: document.getElementById('resultados').value,
+          enfermedad: document.getElementById('diagnostico').value,
+          pruebas: pruebas,
+          medicamentos: medicamentos,
+          recomendacion: document.getElementById('recomendacion').value 
+        };
+    });
+
+      fetch("http://localhost:3000/crear-informe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(datos)
+      }).then(response => response.blob())
+        .then(blob => {
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "informe.pdf";
+          link.click();
+        });
+
+      function añadirPrueba() {
+        const selector = document.getElementById('selector-pruebas');
+        const valor = selector.value;
+        const texto = selector.options[selector.selectedIndex].text;
+        const lista = document.getElementById('lista-pruebas');
+    
+        if (!valor) return;
+    
+        // Comprobar si ya está añadida
+        const existe = Array.from(lista.children).some(
+          item => item.dataset.valor === valor
+        );
+        if (existe) return;
+    
+        const li = document.createElement('li');
+        li.textContent = texto;
+        li.dataset.valor = valor;
+    
+        const btn = document.createElement('button');
+        btn.textContent = 'Eliminar';
+        btn.className = 'remove-btn';
+        btn.onclick = () => lista.removeChild(li);
+    
+        li.appendChild(btn);
+        lista.appendChild(li);
+    
+        selector.selectedIndex = 0;
+      }
+
+      function añadirMedicamento() {
+        const selector = document.getElementById('medicamentos');
+        const valor = selector.value;
+        const texto = selector.options[selector.selectedIndex].text;
+        const lista = document.getElementById('lista-medicamentos');
+
+        if (!valor) return;
+
+        // Comprobar si ya está añadido
+        const existe = Array.from(lista.children).some(
+          item => item.dataset.valor === valor
+        );
+        if (existe) return;
+
+        const li = document.createElement('li');
+        li.textContent = texto;
+        li.dataset.valor = valor;
+
+        const btn = document.createElement('button');
+        btn.textContent = 'Eliminar';
+        btn.className = 'remove-btn';
+        btn.onclick = () => lista.removeChild(li);
+
+        li.appendChild(btn);
+        lista.appendChild(li);
+
+        selector.selectedIndex = 0;
+      }
+    });
+  </script>
+  
   <div class="container">
     <h1>Informe Médico</h1>
     <form id="informe-form">
@@ -50,13 +128,18 @@
       <textarea id="sintomas" name="sintomas" rows="3" required></textarea>
       
       <h3> Pruebas realizadas</h3>
-      <div class="autocomplete-container">
-        <input type="text" id="input-prueba" class="pruebas" placeholder="Ej: Timpanometría...">
-        <button type="button" onclick="agregarPrueba()">Añadir</button>
-      </div>
-      <select id="suggestions" size="3" style="display: none;"></select>
+      <select id="selector-pruebas">
+        <option value="" disabled selected>Selecciona una prueba</option>
+        <option value="otoscopia">Otoscopia</option>
+        <option value="auscultaciónPulmonar">Auscultación pulmonar</option>
+        <option value="exploraciónFaríngea">Exploración faríngea</option>
+        <option value="palpaciónAbdominal">Palpación abdominal</option>
+        <option value="tomaDeTemperatura">Toma de temperatura</option>
+        <option value="inspecciónVisualGeneral">Inspección visual general</option>
+      </select>
+      <button type="button" onclick="añadirPrueba()">Añadir prueba</button>
 
-      <ul id="pruebas-list"></ul>
+      <ul id="lista-pruebas"></ul>
 
       <h3> Diagnóstico</h3>
       <label for="resultados">Observaciones y resultados de las pruebas:</label>
@@ -77,7 +160,7 @@
       <h3> Tratamiento</h3>
       <label for="medicacion">Medicamentos recetados:</label>
       <select id="medicamentos" name="medicamentos">
-        <option value="" disabled selected> </option>
+        <option value="" disabled selected>Selecciona un medicamento</option>
         <option value="amoxicilina">Amoxicilina</option>
         <option value="ibuprofeno">Ibuprofeno</option>
         <option value="Loratadina">Loratadina</option>
@@ -86,9 +169,12 @@
         <option value="salbutamol">Salbutamol</option>
         <option value="sueroOral">Suero Oral</option>
       </select>
+      <button type="button" onclick="añadirMedicamento()">Añadir medicamento</button>
+
+      <ul id="lista-medicamentos"></ul>
 
       <h3> Recomendaciones</h3>
-      <select id="diagnostico" name="diagnostico">
+      <select id="recomendacion" name="recomendaciones">
         <option value="" disabled selected> </option>
         <option value="recOtitis">Otitis</option>
         <option value="recFaringitis">Recomendaciones Faringitis</option>
@@ -99,7 +185,7 @@
         <option value="recMononucleosis">Recomendaciones Mononucleosis</option>
       </select>
 
-      <button type="submit">Generar Informe</button>
+      <button type="submit" class="generador">Generar Informe</button>
     </form>
   </div>
 </body>

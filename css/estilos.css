@@ -85,11 +85,17 @@ body {
     border-radius: 5px;
   }
   .remove-btn {
-    background-color: red;
+    margin-left: 10px;
+    background-color: #d9534f;
     color: white;
     border: none;
-    border-radius: 3px;
+    padding: 2px 8px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px;
   }
   
+  .generador{
+    background-color: green;
+    width: 400px;
+    align-self: center;
+  }
