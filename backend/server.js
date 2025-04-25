@@ -3,19 +3,28 @@ const fs = require('fs');
 const path = require('path');
 const { createTopic, createDITAMap } = require('./generateDITA');
 const generatePDF = require('./generatePDF');
+const { stringify } = require('querystring');
 
 const app = express();
 app.use(express.json());
+// servir archivos estáticos desde la raíz del proyecto
+app.use(express.static(path.join(__dirname, "../")));
 
 app.get("/", (req, res) => {
-  res.sendFile("../html/informe.html")
+  res.sendFile(path.join(__dirname, "../html/informe.html"));
 });
 
 app.post('/crear-informe', (req, res) => {
   const data = req.body;
-  console.log("Aquí ha llegado");
-  const id = Date.now().toString(); // o usa UUID
-  const folder = path.join(__dirname, 'output', id);
+  const enfermedad = data.enfermedad;
+  const recomendacion = data.recomendacion;
+  const medico = data.medico;
+  const nombre = data.nombre.trim().replace(/\s+/g, "");
+  const apellidos = data.apellidos.trim().replace(/\s+/g, "");
+  const id = `informe_${nombre}_${apellidos}`;
+
+  const folder = path.join(__dirname, '../'); // la raíz del proyecto
+
   fs.mkdirSync(folder, { recursive: true });
 
   // Crear infoConsulta.dita
@@ -36,14 +45,16 @@ app.post('/crear-informe', (req, res) => {
   const medicamentos = data.medicamentos.map(m => `medicamentos/${m}.dita`);
 
   // Crear el ditamap
-  createDITAMap(id, folder, pruebas, medicamentos);
+  createDITAMap(id, folder, medico, pruebas, enfermedad, medicamentos, recomendacion);
 
   // Generar el PDF
   generatePDF(id, (err, pdfPath) => {
     if (err) return res.status(500).send('Error generando PDF');
 
-    res.download(pdfPath, `Informe-${id}.pdf`);
+    res.json({ success: true });
   });
+
+  res.json({ success: true });
 });
 
 app.get("/descargar/:id", (req, res) => {

@@ -7,101 +7,111 @@
 </head>
 <body>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+     document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('informe-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
 
-        const pruebas = Array.from(document.getElementById('lista-pruebas').children)
-                            .map(li => li.dataset.valor);
-        const medicamentos = Array.from(document.getElementById('lista-medicamentos').children)
-                                  .map(li => li.dataset.valor);
+            const pruebas = Array.from(document.getElementById('lista-pruebas').children)
+                                .map(li => li.dataset.valor);
+            const medicamentos = Array.from(document.getElementById('lista-medicamentos').children)
+                                      .map(li => li.dataset.valor);
+    
+            const datos = {
+              medico: document.getElementById('medico').value,
+              nombre: document.getElementById('nombrePaciente').value,
+              apellidos: document.getElementById('apellidos').value,
+              edad: parseInt(document.getElementById('edad').value),
+              sintomas: document.getElementById('sintomas').value,
+              resultados: document.getElementById('resultados').value,
+              enfermedad: document.getElementById('diagnostico').value,
+              pruebas: pruebas,
+              medicamentos: medicamentos,
+              recomendacion: document.getElementById('recomendacion').value 
+            };
+       
+            fetch("/crear-informe", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(datos)
+            })
+            .then(response => {
+              if (!response.ok) throw new Error("Error al generar el informe.");
+              return response.blob();
+            })
+            .then(data => {
+              if (data.success){
+                alert("✅ Informe generado con éxito.");
+                location.reload();
+              }
+            })
+            .catch(error => {
+              console.error("Error al generar el informe:", error);
+              alert("❌ Ha ocurrido un error al generar el informe.");
+            });
 
-        const datos = {
-          medico: document.getElementById('medico').value,
-          nombre: document.getElementById('nombrePaciente').value,
-          apellidos: document.getElementById('apellidos').value,
-          edad: parseInt(document.getElementById('edad').value),
-          sintomas: document.getElementById('sintomas').value,
-          resultados: document.getElementById('resultados').value,
-          enfermedad: document.getElementById('diagnostico').value,
-          pruebas: pruebas,
-          medicamentos: medicamentos,
-          recomendacion: document.getElementById('recomendacion').value 
-        };
-    });
-
-      fetch("http://localhost:3000/crear-informe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datos)
-      }).then(response => response.blob())
-        .then(blob => {
-          const link = document.createElement("a");
-          link.href = URL.createObjectURL(blob);
-          link.download = "informe.pdf";
-          link.click();
+          });
         });
 
-      function añadirPrueba() {
-        const selector = document.getElementById('selector-pruebas');
-        const valor = selector.value;
-        const texto = selector.options[selector.selectedIndex].text;
-        const lista = document.getElementById('lista-pruebas');
+          function añadirPrueba() {
+            const selector = document.getElementById('selector-pruebas');
+            const valor = selector.value;
+            const texto = selector.options[selector.selectedIndex].text;
+            const lista = document.getElementById('lista-pruebas');
+        
+            if (!valor) return;
+        
+            // Comprobar si ya está añadida
+            const existe = Array.from(lista.children).some(
+              item => item.dataset.valor === valor
+            );
+            if (existe) return;
+        
+            const li = document.createElement('li');
+            li.textContent = texto;
+            li.dataset.valor = valor;
+        
+            const btn = document.createElement('button');
+            btn.textContent = 'Eliminar';
+            btn.className = 'remove-btn';
+            btn.onclick = () => lista.removeChild(li);
+        
+            li.appendChild(btn);
+            lista.appendChild(li);
+        
+            selector.selectedIndex = 0;
+          }
     
-        if (!valor) return;
+          function añadirMedicamento() {
+            const selector = document.getElementById('medicamentos');
+            const valor = selector.value;
+            const texto = selector.options[selector.selectedIndex].text;
+            const lista = document.getElementById('lista-medicamentos');
     
-        // Comprobar si ya está añadida
-        const existe = Array.from(lista.children).some(
-          item => item.dataset.valor === valor
-        );
-        if (existe) return;
+            if (!valor) return;
     
-        const li = document.createElement('li');
-        li.textContent = texto;
-        li.dataset.valor = valor;
+            // Comprobar si ya está añadido
+            const existe = Array.from(lista.children).some(
+              item => item.dataset.valor === valor
+            );
+            if (existe) return;
     
-        const btn = document.createElement('button');
-        btn.textContent = 'Eliminar';
-        btn.className = 'remove-btn';
-        btn.onclick = () => lista.removeChild(li);
+            const li = document.createElement('li');
+            li.textContent = texto;
+            li.dataset.valor = valor;
     
-        li.appendChild(btn);
-        lista.appendChild(li);
+            const btn = document.createElement('button');
+            btn.textContent = 'Eliminar';
+            btn.className = 'remove-btn';
+            btn.onclick = () => lista.removeChild(li);
     
-        selector.selectedIndex = 0;
-      }
-
-      function añadirMedicamento() {
-        const selector = document.getElementById('medicamentos');
-        const valor = selector.value;
-        const texto = selector.options[selector.selectedIndex].text;
-        const lista = document.getElementById('lista-medicamentos');
-
-        if (!valor) return;
-
-        // Comprobar si ya está añadido
-        const existe = Array.from(lista.children).some(
-          item => item.dataset.valor === valor
-        );
-        if (existe) return;
-
-        const li = document.createElement('li');
-        li.textContent = texto;
-        li.dataset.valor = valor;
-
-        const btn = document.createElement('button');
-        btn.textContent = 'Eliminar';
-        btn.className = 'remove-btn';
-        btn.onclick = () => lista.removeChild(li);
-
-        li.appendChild(btn);
-        lista.appendChild(li);
-
-        selector.selectedIndex = 0;
-      }
-    });
+            li.appendChild(btn);
+            lista.appendChild(li);
+    
+            selector.selectedIndex = 0;
+          }
+        
+          module.exports;
   </script>
-  
   <div class="container">
     <h1>Informe Médico</h1>
     <form id="informe-form">
@@ -109,8 +119,8 @@
       <label for="medico">Médico:</label>
       <select id="medico" class="medico" name="diagnostico">
         <option value="" disabled selected> </option>
-        <option value="medicoJavier">Dr. Javier López</option>
-        <option value="medicoJuan">Dr. Juan Pérez</option>
+        <option value="medicoJavierLopez">Dr. Javier López</option>
+        <option value="medicoJuanPerez">Dr. Juan Pérez</option>
       </select>
 
       <!-- Datos del paciente -->
@@ -131,11 +141,11 @@
       <select id="selector-pruebas">
         <option value="" disabled selected>Selecciona una prueba</option>
         <option value="otoscopia">Otoscopia</option>
-        <option value="auscultaciónPulmonar">Auscultación pulmonar</option>
-        <option value="exploraciónFaríngea">Exploración faríngea</option>
-        <option value="palpaciónAbdominal">Palpación abdominal</option>
-        <option value="tomaDeTemperatura">Toma de temperatura</option>
-        <option value="inspecciónVisualGeneral">Inspección visual general</option>
+        <option value="auscultacionPulmonar">Auscultación pulmonar</option>
+        <option value="exploracionFaringea">Exploración faríngea</option>
+        <option value="palpacionAbdominal">Palpación abdominal</option>
+        <option value="pruebaTemperatura">Toma de temperatura</option>
+        <option value="inspeccionVisual">Inspección visual general</option>
       </select>
       <button type="button" onclick="añadirPrueba()">Añadir prueba</button>
 
@@ -188,5 +198,6 @@
       <button type="submit" class="generador">Generar Informe</button>
     </form>
   </div>
+
 </body>
 </html>
