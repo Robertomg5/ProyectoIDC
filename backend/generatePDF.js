@@ -5,7 +5,7 @@ const path = require("path");
 function generatePDF(idConsulta) {
   return new Promise((resolve, reject) => {
     // Ruta al DITAMap generado en la raíz de ProyectoIDC
-    const ditamap = path.resolve(__dirname, `../informe${idConsulta}.ditamap`);
+    const ditamap = path.resolve(__dirname, `../ditamaps/${idConsulta}.ditamap`);
 
     // Ruta donde está instalado DITA-OT (fuera de ProyectoIDC)
     const ditaPath = path.resolve("C:/Users/rober/OneDrive/Documentos/IDC/dita-ot-4.3.1/bin/dita.bat");

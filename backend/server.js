@@ -21,7 +21,7 @@ app.post('/crear-informe', (req, res) => {
   const medico = data.medico;
   const nombre = data.nombre.trim().replace(/\s+/g, "");
   const apellidos = data.apellidos.trim().replace(/\s+/g, "");
-  const id = `informe_${nombre}_${apellidos}`;
+  const id = `${nombre}_${apellidos}`;
 
   const folder = path.join(__dirname, '../'); // la raíz del proyecto
 
@@ -34,11 +34,11 @@ app.post('/crear-informe', (req, res) => {
     <p><b>Edad:</b> ${data.edad}</p>
     <p><b>Síntomas:</b> ${data.sintomas}</p>
   `;
-  createTopic(id, folder, `infoConsulta${id}`, 'Resumen de la consulta', infoContent);
+  createTopic(folder, `infoConsulta${id}`, 'Resumen de la consulta', infoContent);
 
   // Crear resultados.dita
   const obsContent = `<p>${data.resultados}</p>`;
-  createTopic(id, folder, `resultados${id}`, 'Resultados de las pruebas', obsContent);
+  createTopic(folder, `resultados${id}`, 'Resultados de las pruebas', obsContent);
 
   // Preparar rutas relativas de pruebas y medicamentos
   const pruebas = data.pruebas.map(p => `pruebas/${p}.dita`);

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.3/os/dtd/concept.dtd">
+<concept id="infoConsultaPedro_BotellaLopez" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Resumen de la consulta</title>
+  <conbody>
+    
+    <p><b>Nombre:</b> Pedro</p>
+    <p><b>Apellidos:</b> Botella Lopez</p>
+    <p><b>Edad:</b> 33</p>
+    <p><b>Síntomas:</b> ncacndnncdwncdcnucndwe</p>
+  
+  </conbody>
+</concept>
