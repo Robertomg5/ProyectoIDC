@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Informe Médico</title>
+
+  <topicref navtitle="Información de la consulta">
+    <topicref navtitle="Médico">
+      <topicref href="../medicos/medicoJavierLopez.dita" navtitle="Médico"/>
+    </topicref>
+    <topicref navtitle="Datos del paciente">
+      <topicref href="../consultas/infoConsultacdc_cdscd.dita" navtitle="Resumen de la consulta"/>
+    </topicref>
+  </topicref>
+
+  <topicref navtitle="Pruebas Realizadas">
+    <topicref href="../pruebas/exploracionFaringea.dita" navtitle="exploracionFaringea"/>
+  </topicref>
+
+  <topicref navtitle="Diagnóstico">
+    <topicref href="../consultas/resultadoscdc_cdscd.dita" navtitle="Resultados"/>
+    <topicref href="../enfermedades/amigdalitis.dita" navtitle="Enfermedad"/>
+  </topicref>
+
+  <topicref navtitle="Tratamiento">
+    <topicref navtitle="Medicación">
+      <topicref href="../medicamentos/ibuprofeno.dita" navtitle="ibuprofeno"/>
+    </topicref>
+    <topicref navtitle="Recomendaciones">
+      <topicref href="../recomendaciones/recLaringitis.dita" navtitle="Recomendaciones"/>
+    </topicref>
+  </topicref>
+</map>

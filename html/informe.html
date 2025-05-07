@@ -9,7 +9,7 @@
   <script>
      document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('informe-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            e.preventDefault(); 
 
             const pruebas = Array.from(document.getElementById('lista-pruebas').children)
                                 .map(li => li.dataset.valor);
@@ -34,21 +34,23 @@
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(datos)
             })
-            .then(response => {
-              if (!response.ok) throw new Error("Error al generar el informe.");
-              return response.blob();
+            .then(res => {
+              if (!res.ok) throw new Error('Error al generar el informe');
+              return res.json();
             })
-            .then(data => {
-              if (data.success){
-                alert("✅ Informe generado con éxito.");
-                location.reload();
-              }
+            .then(({ success, id }) => {
+              if (!success) throw new Error("La generación ha fallado");
+
+              // 2) Mostrar alerta
+              alert("✅ Informe generado con éxito.");
+
+              // 3) Recargar la página para limpiar el formulario
+              location.reload();
             })
-            .catch(error => {
-              console.error("Error al generar el informe:", error);
+            .catch(err => {
+              console.error(err);
               alert("❌ Ha ocurrido un error al generar el informe.");
             });
-
           });
         });
 

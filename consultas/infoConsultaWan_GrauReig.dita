@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.3/os/dtd/concept.dtd">
+<concept id="infoConsultaWan_GrauReig" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Resumen de la consulta</title>
+  <conbody>
+    
+    <p><b>Nombre:</b> Wan</p>
+    <p><b>Apellidos:</b> Grau Reig</p>
+    <p><b>Edad:</b> 22</p>
+    <p><b>Síntomas:</b> El paciente llega con un dolor intenso de pito, parece bastante dolorido. Además, también afirma que padece un dolor de corazón por desamor.</p>
+  
+  </conbody>
+</concept>

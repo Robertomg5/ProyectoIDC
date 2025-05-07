@@ -23,8 +23,12 @@ function createDITAMap(id, folder, medico, pruebas, enfermedad, medicamentos, re
   <title>Informe Médico</title>
 
   <topicref navtitle="Información de la consulta">
-    <topicref href="../medicos/${medico}.dita" navtitle="Médico"/>
-    <topicref href="../consultas/infoConsulta${id}.dita" navtitle="Resumen de la consulta"/>
+    <topicref navtitle="Médico">
+      <topicref href="../medicos/${medico}.dita" navtitle="Médico"/>
+    </topicref>
+    <topicref navtitle="Datos del paciente">
+      <topicref href="../consultas/infoConsulta${id}.dita" navtitle="Resumen de la consulta"/>
+    </topicref>
   </topicref>
 
   <topicref navtitle="Pruebas Realizadas">

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.3/os/dtd/concept.dtd">
+<concept id="infoConsultacdc_cdscd" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Resumen de la consulta</title>
+  <conbody>
+    
+    <p><b>Nombre:</b> cdc</p>
+    <p><b>Apellidos:</b> cdscd</p>
+    <p><b>Edad:</b> 44</p>
+    <p><b>Síntomas:</b> cdwcdc</p>
+  
+  </conbody>
+</concept>

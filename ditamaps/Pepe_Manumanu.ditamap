@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Informe Médico</title>
+
+  <topicref navtitle="Información de la consulta">
+    <topicref navtitle="Médico">
+      <topicref href="../medicos/medicoJavierLopez.dita" navtitle="Médico"/>
+    </topicref>
+    <topicref navtitle="Datos del paciente">
+      <topicref href="../consultas/infoConsultaPepe_Manumanu.dita" navtitle="Resumen de la consulta"/>
+    </topicref>
+  </topicref>
+
+  <topicref navtitle="Pruebas Realizadas">
+    <topicref href="../pruebas/auscultacionPulmonar.dita" navtitle="auscultacionPulmonar"/>
+    <topicref href="../pruebas/palpacionAbdominal.dita" navtitle="palpacionAbdominal"/>
+  </topicref>
+
+  <topicref navtitle="Diagnóstico">
+    <topicref href="../consultas/resultadosPepe_Manumanu.dita" navtitle="Resultados"/>
+    <topicref href="../enfermedades/faringitis.dita" navtitle="Enfermedad"/>
+  </topicref>
+
+  <topicref navtitle="Tratamiento">
+    <topicref navtitle="Medicación">
+      <topicref href="../medicamentos/amoxicilina.dita" navtitle="amoxicilina"/>
+      <topicref href="../medicamentos/paracetamol.dita" navtitle="paracetamol"/>
+    </topicref>
+    <topicref navtitle="Recomendaciones">
+      <topicref href="../recomendaciones/recGripe.dita" navtitle="Recomendaciones"/>
+    </topicref>
+  </topicref>
+</map>
